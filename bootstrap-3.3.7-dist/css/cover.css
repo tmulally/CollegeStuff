@@ -35,13 +35,24 @@ body {
 
 }
 
+@font-face {
+  font-family:"Cool2";
+  src:url("../fonts/CoolStuff.ttf");
+}
+
+@font-face {
+  font-family: "flash2";
+  src:url("../fonts/flashrogerschrome_0.ttf");
+}
+
 .minititle {
-  font-family: "Cool Stuff";
-  font-size: 40px;
+  font-family: "Cool2";
+  font-size: 35px;
 }
 
 .bigt {
-  font-family: "Flash Rogers Chrome";
+  font-family: "flash2";
+
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
