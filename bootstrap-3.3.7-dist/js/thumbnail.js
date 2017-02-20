@@ -4,7 +4,18 @@
 function goTo(number){
     $('ul.pager li:eq('+number+') a').tab('show');
     upgradePreNext(number);
+
 }
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+
+
 function upgradePreNext(number){
     if (number>1){
         $('ul.pager li:eq(0)').attr("onclick","goTo("+(number-1)+")");
