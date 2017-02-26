@@ -13,9 +13,6 @@
     <script src="bootstrap-3.3.7-dist/js/thumbnail.js"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery-1.11.3.min.js"></script>
     <link href="bootstrap-3.3.7-dist/css/style.css" rel="stylesheet">
-    <!--
-    <link href="bootstrap-3.3.7-dist/css/style3.css" rel="stylesheet">
-    -->
     <link href="favicon.ico" rel="shortcut icon">
 
 </head>
@@ -46,7 +43,7 @@
                 <button type="submit" class="btn btn-success">Log In</button>
                 <a class="btn btn-primary" href="signup.html" role="button">Sign Up</a>
             </form>
-        </div><!--/.navbar-collapse -->
+        </div>
     </div>
 </nav>
 </div>
@@ -57,42 +54,32 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <div class="container-fluid">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button"
-                            id="menu1" data-toggle="dropdown">Select College/University<span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Gallaudet University</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">American University</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Howard University</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Georgetown University</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-10">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6 ">
+                    <div class="col-md-6">
+                        <div class="container-fluid">
+                            <div class="row">
                         <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Buy</button>
                         <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-usd"></i> Sell</button>
-                    </div>
-                    <div class="col-sm-6">
-                    <form action="" class="search-form">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="Search a stuff">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
                             </div>
-                        </form>
+                            </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+                    <div class="col-md-6">
+                        <div class="container-fluid">
+                            <form role="form" id="form-buscar">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required/>
+                                        <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
+                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i></button></span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
 </div>
 
 <div class="container-fluid">
@@ -103,18 +90,7 @@
 
     <div class="col-md-2">
 
-
-
-
-        <!--falkdsjhfjklsdf-->
-
-
-
-
-
-
-
-                <div class="panel panel-default">
+        <div class="panel panel-default">
                     <div class="panel-heading">
                     <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Categories</h1>
                     </div>
@@ -122,26 +98,34 @@
                         <a href="#" class="list-group-item">Fashion</a>
                         <a href="#" class="list-group-item">Electronics</a>
                         <a href="#" class="list-group-item">Furniture</a>
-                        <a href="#" class="list-group-item">Toys</a>
-                        <a href="#" class="list-group-item">Music</a>
-                        <a href="#" class="list-group-item">Collectibles & Art</a>
                         <a href="#" class="list-group-item">Sporting Goods</a>
+                        <a href="#" class="list-group-item">Collectibles & Art</a>
+                        <div id="MainMenu">
+                            <div class="list-group panel">
+                                <a href="#demo3" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><b>More...</b></a>
+                                <div class="collapse" id="demo3">
+                                    <a href="" class="list-group-item">Music</a>
+                                    <a href="" class="list-group-item">Toys</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-cog"></span> Profile</h1>
-                    </div>
-
-                    <div class="panel-body">
-                        <img src="bootstrap-3.3.7-dist/images/th.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
-                    <p>Jennifer Lopez</p>
-                    <p><button class="btn btn-default">View</button></p>
-                    </div>
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                <h1 class="panel-title"><span class="glyphicon glyphicon-user"></span> Profile</h1>
                 </div>
 
-                <div class="panel panel-default">
+                 <div class="panel-body">
+                    <img src="bootstrap-3.3.7-dist/images/th.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
+                     <br><br>
+                     <p><b>Jennifer Lopez</b></p>
+                     <a class="btn btn-info" href="profile.html" role="button">View my Profile</a>
+                </div>
+                </div>
+
+        <div class="panel panel-default">
                     <div class="panel-heading">
                     <h3 class="panel-title">
                     <span class="glyphicon glyphicon-eye-open"></span>
@@ -182,505 +166,10 @@
 
                     </div>
                 </div>
+
     </div>
 
     <div class="col-md-10">
-            <!--
-            <div class="container">
-                <h4>NEW COLLECTION</h4>
-                <div class="row">
-
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			    </div>
-    		        </span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			    </div>
-    		        </span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-          			</div>
-            		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			    </div>
-    		        </span>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			    </div>
-    		        </span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		        <span class="thumbnail">
-      			    <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
-      			    <h4>Product Tittle</h4>
-      			    <div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-      			    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			    <hr class="line">
-      			    <div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-
-
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-
-
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-    		<span class="thumbnail">
-      			<img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
-      			<h4>Product Tittle</h4>
-      			<div class="ratings">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-      			<hr class="line">
-      			<div class="row">
-      				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
-      				</div>
-      				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-info right" > BUY ITEM</button>
-      				</div>
-
-      			</div>
-    		</span>
-                    </div>
-
-
-                </div>
-            </div>-->
-
 
             <div class="tab-content">
 
@@ -1180,8 +669,8 @@
 
 
             <div class="row">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center" role="tablist">
+                <div class="col-md-12 text-center">
+                    <ul class="pagination" role="tablist">
                         <li class="previous" onclick="goTo(1);"><a href="#"><span aria-hidden="true">←</span> Previous</a></li>
                         <li class="active" id="first">
                             <a aria-controls="tab1" data-toggle="tab" href="#tab1" role="tab">1</a>
@@ -1200,10 +689,12 @@
                         </li>
                         <li class="next" onclick="goTo(2);"><a href="#">Next <span aria-hidden="true">→</span></a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
+
     </div>
+
+</div>
 
 <footer class="footer">
     <div class="main-footer" data-pg-collapsed>
@@ -1310,7 +801,7 @@
     </div>
     <div class="bottom-footer" data-pg-collapsed>
         <div class="container-fluid">
-            <p>© 2017 <a href="" target="_blank">CollegeStuff</a></p>
+            <p>© 2017 <a href="" target="_blank">CollegeStuff. All Rights Reserved</a></p>
         </div>
     </div>
 

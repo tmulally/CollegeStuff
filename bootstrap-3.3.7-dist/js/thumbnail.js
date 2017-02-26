@@ -30,12 +30,39 @@ function upgradePreNext(number){
         $('ul.pager li:eq(6)').attr("class", "disabled");
     }
 }
+
+
+
 $(document).ready(function(){
+
+    $('.src-image').each(function(){
+        sourceImages.push($(this).attr('src'));
+    });
+
+    $('.avatar img').each(function(index){
+        $(this).attr('src', sourceImages[index] );
+    });
+
+
+    $('.card canvas').each(function(index){
+        var canvas = $(this)[0];
+
+        var image = new Image();
+        image.src = sourceImages[index];
+
+        image.onload = function() {
+            drawBlur(canvas, image);
+        }
+    });
+
     $('li a').on('click',function(e){
         goTo((e.target.innerHTML)-0);
     });
 
     $('#myCarousel').carousel({
         interval: 10000
-    })
+    });
+
+
 });
+
