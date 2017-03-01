@@ -22,6 +22,11 @@ h1.title {
     font-weight: 400;
 }
 
+h2{
+    color: #fff;
+    padding: auto;
+}
+
 hr{
     width: 10%;
     color: #fff;
@@ -30,6 +35,8 @@ hr{
 .form-group{
     margin-bottom: 15px;
 }
+
+.panel
 
 label{
     margin-bottom: 15px;
@@ -86,11 +93,25 @@ input::-webkit-input-placeholder {
 .main-center{
     margin-top: 30px;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 500px;
     padding: 10px 40px;
     background:#2b669a;
     color: #FFF;
     text-shadow: none;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+.main-center2{
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px 40px;
+    background:#2b669a;
+    color: #2b669a;
+    text-shadow: none;
+    font-size: larger;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
