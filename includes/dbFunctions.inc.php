@@ -52,85 +52,35 @@ function categoryNameBonus(){
     }
 }
 
-
-
-function leftRailPopCount(){
+function signupCollegeList(){
     $db = setconnection();
-    $query = "SELECT DISTINCT geocountries.ISO, geocountries.CountryName FROM `geocountries`, `travelimagedetails` WHERE geocountries.ISO = travelimagedetails.CountryCodeISO;";
+    $query = "SELECT Location_ID, CollegeName FROM `Location` ORDER BY CollegeName";
 
     $temp = $db->query($query);
     $temp->setFetchMode(PDO::FETCH_ASSOC);
     while ($r = $temp->fetch()){
-        echo ("<li class='list-group-item'><a href='browse-images.php?city=0&country=" . $r['ISO'] . "'>" . $r['CountryName'] . "</a></li>");
+        echo ("<option value='" . $r[Location_ID] . "'>" . $r['CollegeName'] . "</option>");
     }
 }
 
-function displayImages(){
-    $db = setconnection();
-    $query = "SELECT Path FROM `travelimage`;";
+function newUser($Fname, $Lname, $email, $phone, $username, $college, $password){
+        $db = setconnection();
+        $temp = $db->prepare("INSERT INTO `Password` (`Login_Name`, `Password`) VALUES (:userparam, :passparam);");
 
-    $temp = $db->query($query);
-    $temp->setFetchMode(PDO::FETCH_ASSOC);
-    while ($r = $temp->fetch()){
-        echo ("<img src ='images/travel/square/" . $r['Path'] . "' class='img-thumbnail'></img>");
-    }
+        $temp->bindParam(':userparam', $username, PDO::PARAM_STR);
+        $temp->bindParam(':passparam', $password, PDO::PARAM_STR);
+
+        $temp->execute();
+
+        $temp2 = $db->prepare("INSERT INTO `Users` (`FirstName`, `LastName`, `Email`, `Phone`, `Location_ID`, `Login_Name`) VALUES (:fnameparam, :lnameparam, :emailparam, :phoneparam, :collegeparam, :userparam);");
+        $temp2->bindParam(':fnameparam', $Fname, PDO::PARAM_STR);
+        $temp2->bindParam(':lnameparam', $Lname, PDO::PARAM_STR);
+        $temp2->bindParam(':emailparam', $email, PDO::PARAM_STR);
+        $temp2->bindParam(':phoneparam', $phone, PDO::PARAM_INT);
+        $temp2->bindParam(':collegeparam', $college, PDO::PARAM_INT);
+        $temp2->bindParam(':userparam', $username, PDO::PARAM_STR);
+
+        $temp2->execute();
+
+
 }
-
-function searchImages($city, $country){
-    if ($city == 0){
-        if ($country == "ZZZ"){
-            displayImages();
-        }
-        else{
-            countrySearch($country);
-        }
-    }
-    else if($country == "ZZZ"){
-        citySearch($city);
-    }
-    else{
-        dualSearch($city, $country);
-    }
-}
-
-function citySearch($city){
-    $db = setconnection();
-
-    $temp = $db->prepare('SELECT DISTINCT Path FROM `travelimage`, `travelimagedetails` WHERE travelimage.UID = travelimagedetails.ImageID AND travelimagedetails.CityCode = :parameter ;');
-    $temp->bindParam(':parameter', $city, PDO::PARAM_STR);
-    $temp->execute();
-
-    $temp->setFetchMode(PDO::FETCH_ASSOC);
-    while ($r = $temp->fetch()){
-        echo ("<img src ='images/travel/square/" . $r['Path'] . "' class='img-thumbnail'></img>");
-    }
-}
-
-function countrySearch($country){
-    $db = setconnection();
-
-    $temp = $db->prepare('SELECT DISTINCT Path FROM `travelimage`, `travelimagedetails` WHERE travelimage.UID = travelimagedetails.ImageID AND travelimagedetails.CountryCodeISO = :parameter ;');
-    $temp->bindParam(':parameter', $country, PDO::PARAM_STR);
-    $temp->execute();
-
-    $temp->setFetchMode(PDO::FETCH_ASSOC);
-    while ($r = $temp->fetch()){
-        echo ("<img src ='images/travel/square/" . $r['Path'] . "' class='img-thumbnail'></img>");
-    }
-}
-
-function dualSearch($city, $country){
-    $db = setconnection();
-
-    $temp = $db->prepare('SELECT DISTINCT Path FROM `travelimage`, `travelimagedetails` WHERE travelimage.UID = travelimagedetails.ImageID AND travelimagedetails.CountryCodeISO = :parameter1 AND travelimagedetails.CityCode = :parameter2');
-    $temp->bindParam(':parameter1', $country, PDO::PARAM_STR);
-    $temp->bindParam(':parameter2', $city, PDO::PARAM_STR);
-    $temp->execute();
-
-    $temp->setFetchMode(PDO::FETCH_ASSOC);
-    while ($r = $temp->fetch()){
-        echo ("<img src ='images/travel/square/" . $r['Path'] . "' class='img-thumbnail'></img>");
-    }
-}
-
-?>
