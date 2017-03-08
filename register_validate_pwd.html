@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require_once('includes/dbFunctions.inc.php');
 
@@ -43,6 +43,11 @@ if (isset($_POST['password'])){
 
 
 ?>
+-->
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +59,8 @@ if (isset($_POST['password'])){
     <link href="favicon.ico" rel="shortcut icon">
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/validate_password.js"></script>
 
     <title>CollegeStuff</title>
@@ -143,11 +150,13 @@ if (isset($_POST['password'])){
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" name="pass2" id="pass2" onkeyup="checkPass(); return false;">
+                            <input type="password" class="form-control" name="pass2" id="pass2" onkeyup="checkPass(); return false;">
                                         <span id="confirmMessage" class="confirmMessage"></span>
 
 
-                            //<input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password"/>
+                           <!--  <input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password"/>  -->
+
+
                         </div>
                     </div>
                 </div>
