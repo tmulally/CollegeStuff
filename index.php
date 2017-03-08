@@ -45,7 +45,7 @@ require_once('includes/dbFunctions.inc.php');
                     <input type="password" placeholder="Password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Log In</button>
-                <a class="btn btn-primary" href="signup.html" role="button">Sign Up</a>
+                <a class="btn btn-primary" href="signup.php" role="button">Sign Up</a>
             </form>
         </div>
     </div>
