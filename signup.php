@@ -54,7 +54,12 @@ if (isset($_POST['password'])){
     <link href="favicon.ico" rel="shortcut icon">
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+    //js for validate pwd
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/validate_password.js"></script>
+
+
 
     <title>CollegeStuff</title>
 </head>
@@ -128,12 +133,25 @@ if (isset($_POST['password'])){
                     </div>
                 </div>
 
+
+
+
+
+
+
+
+
+
+                // Edit this password part! See "register_validate_pwd.html" for the code
+
+
+
                 <div class="form-group">
                     <label for="password" class="cols-sm-2 control-label">Password</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="pass1" id="pass1"  placeholder="Enter your Password"/>
+                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
                         </div>
                     </div>
                 </div>
@@ -143,17 +161,20 @@ if (isset($_POST['password'])){
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" name="pass2" id="pass2" onkeyup="checkPass(); return false;">
-                                        <span id="confirmMessage" class="confirmMessage"></span>
+                            <input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password"/>
 
 
-                            //<input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password"/>
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group ">
-
                     <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Submit">
                 </div>
 
