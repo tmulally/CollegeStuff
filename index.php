@@ -57,42 +57,39 @@ require_once('includes/dbFunctions.inc.php');
     <h1 class="bigt" >CollegeStuff</h1>
 </div>
 
-<div class="container-fluid">
-
-                    <div class="col-md-6">
-                        <div class="container-fluid">
-                            <div class="row">
-                        <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Buy</button>
-                        <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-usd"></i> Sell</button>
-                            </div>
-                            </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="container-fluid">
-                            <form role="form" id="form-buscar">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required/>
-                                        <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">
-                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i></button></span>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-
-</div>
-
-<div class="container-fluid">
-<hr>
-</div>
 
 <div class="container-fluid">
 
     <div class="col-md-2">
+
+        <div class="form-group">
+
+        <button type="button" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> BUY</button>
+        <button type="button" class="btn btn-warning btn-block"><i class="glyphicon glyphicon-usd"></i> SELL</button>
+
+        </div>
+
+        <div class="form-group">
+            <select id="campus" class="form-control">
+                <option value="0" selected="selected">Select Campus</option>
+                <option value="1">Gallaudet University</option>
+                <option value="32">American University</option>
+                <option value="4">Howard University</option>
+                <option value="5">Georgetown University</option>
+            </select>
+
+        </div>
+
+        <form role="form" id="form-buscar">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required/>
+                        <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
+                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i></button></span>
+                    </div>
+                </div>
+        </form>
 
         <div class="panel panel-default">
                     <div class="panel-heading">
@@ -142,19 +139,19 @@ require_once('includes/dbFunctions.inc.php');
 
                                         <div class="item active">
                                             <div class="row-fluid">
-                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/240x150" alt="Image" style="max-width:100%;" /></a></div>
                                             </div><!--/row-fluid-->
                                         </div><!--/item-->
 
                                         <div class="item">
                                             <div class="row-fluid">
-                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/240x150" alt="Image" style="max-width:100%;" /></a></div>
                                              </div><!--/row-fluid-->
                                         </div><!--/item-->
 
                                         <div class="item">
                                             <div class="row-fluid">
-                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+                                                <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/240x150" alt="Image" style="max-width:100%;" /></a></div>
                                             </div><!--/row-fluid-->
                                         </div><!--/item-->
                                     </div><!--/carousel-inner-->
@@ -173,499 +170,162 @@ require_once('includes/dbFunctions.inc.php');
             <div class="tab-content">
 
                 <div class="tab-pane active" id="tab1" role="tabpanel">
-                    <div class="col-sm-3">
+
+
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label3</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label4</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label5</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label6</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
                         <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
+                            <img src="http://placehold.it/240x150" alt="">
                             <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/240x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/240x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/240x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/240x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                                <h4><a href="">Second Auction</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
                 <div class="tab-pane" id="tab2" role="tabpanel">
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label3</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label4</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label5</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label6</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label7</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label8</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
 
                 <div class="tab-pane" id="tab3" role="tabpanel">
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label3</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label4</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label5</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label6</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+
                 <div class="tab-pane" id="tab4" role="tabpanel">
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label3</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label4</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label5</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label6</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="tab-pane" id="tab5" role="tabpanel">
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label1</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label2</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label3</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label4</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label5</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label6</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label7</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="thumbnail">
-                            <img alt="..." src="http://placehold.it/240x150">
-                            <div class="caption">
-                                <h3>Thumbnail label8</h3>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                                    Donec id elit non mi porta gravida at eget metus.</p>
-                                <p><a href="#" class="btn btn-success btn-product">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -695,116 +355,63 @@ require_once('includes/dbFunctions.inc.php');
 
 </div>
 
-<footer class="footer">
-    <div class="main-footer" data-pg-collapsed>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-3">
-                    <div class="widget w-footer widget_black_studio_tinymce">
-                        <h6 class="widget-title"><span class="light">About</span> Us</h6>
-                        <div class="textwidget">The CollegeStuff is a website for anyone who are students, staff and
-                            others on campus of a college/university in the United States of America. It is comfortable, quick, simple
-                            and secure website for selling or buying a stuff.
-                        </div>
-                    </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footerleft ">
+                <div class="logofooter"> Logo</div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                <p><i class="fa fa-map-pin"></i> 800, Florida Ave NE, Washington, DC 20002, USA</p>
+                <p><i class="fa fa-phone"></i> Phone (USA) : +1 9999 878 398</p>
+                <p><i class="fa fa-envelope"></i> E-mail : collegestuff@gmail.com</p>
+
+            </div>
+            <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                <h6 class="heading7">GENERAL LINKS</h6>
+                <ul class="footer-ul">
+                    <li><a href="#"> Career</a></li>
+                    <li><a href="#"> Privacy Policy</a></li>
+                    <li><a href="#"> Terms & Conditions</a></li>
+                    <li><a href="#"> Client Gateway</a></li>
+                    <li><a href="#"> Ranking</a></li>
+                    <li><a href="#"> Case Studies</a></li>
+                    <li><a href="#"> Frequently Ask Questions</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                <h6 class="heading7">LATEST POST</h6>
+                <div class="post">
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                    <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
                 </div>
-                <div class="col-xs-12 col-md-3">
-                    <div class="widget w-footer widget_nav_menu">
-                        <h6 class="widget-title"><span class="light">Extra</span> Navigation</h6>
-                        <div class="menu-footer-menu-container">
-                            <ul id="menu-footer-menu" class="menu">
-                                <li id="menu-item-6694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6694">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/shortcodes/">Shortcodes</a>
-                                </li>
-                                <li id="menu-item-6696" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6696">
-                                    <a href="http://www.qreativethemes.com/docs/thelandscaper">Documentation</a>
-                                </li>
-                                <li id="menu-item-6692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6692">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/make-an-appointment/">Make an Appointment</a>
-                                </li>
-                                <li id="menu-item-6695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6695">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/case-study/">Case Study</a>
-                                </li>
-                                <li id="menu-item-6691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6691">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/frequently-asked-questions/">Frequently Asked Questions</a>
-                                </li>
-                                <li id="menu-item-6693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6693">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/prices-and-delivery/">Prices & Delivery</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3">
-                    <div class="widget w-footer widget_nav_menu">
-                        <h6 class="widget-title"><span class="light">Our</span> Services</h6>
-                        <div class="menu-services-menu-container">
-                            <ul id="menu-services-menu" class="menu">
-                                <li id="menu-item-6684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6684">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/">See all Services</a>
-                                </li>
-                                <li id="menu-item-6685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6685">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/irrigation-and-drainage/">Irrigation & Drainage</a>
-                                </li>
-                                <li id="menu-item-6686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6686">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/lawn-and-garden-care/">Lawn & Garden Care</a>
-                                </li>
-                                <li id="menu-item-6687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6687">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/planting-and-removal/">Planting & Removal</a>
-                                </li>
-                                <li id="menu-item-6688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6688">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/snow-and-ice-removal/">Snow & Ice Removal</a>
-                                </li>
-                                <li id="menu-item-6689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6689">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/spring-and-fall-cleanup/">Spring & Fall Cleanup</a>
-                                </li>
-                                <li id="menu-item-6690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6690">
-                                    <a href="https://demos.qreativethemes.com/thelandscaper/services/stone-and-hardscaping/">Stone & Hardscaping</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3">
-                    <div class="widget w-footer widget-opening-hours">
-                        <h6 class="widget-title"><span class="light">Working</span> Hours</h6>
-                        <div class="opening-times">
-                            <ul>
-                                <li class="weekday">Monday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday">Tuesday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday">Wednesday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday">Thursday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday">Friday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday">Saturday
-                                    <span class="right">8:00am-5:00pm</span>
-                                </li>
-                                <li class="weekday today">Sunday
-                                    <span class="right label">CLOSED</span>
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+            <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bottom-footer" data-pg-collapsed>
-        <div class="container-fluid">
-            <p>© 2017 <a href="" target="_blank">CollegeStuff. All Rights Reserved</a></p>
+</footer>
+
+<div class="copyright">
+    <div class="container">
+        <div class="col-md-6">
+            <p>© CollegeStuff 2017 - All Rights</p>
+        </div>
+        <div class="col-md-6">
+            <ul class="bottom_ul">
+                <li><a href="#">collegestuff.com</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
         </div>
     </div>
-
-</footer>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
