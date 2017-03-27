@@ -1,5 +1,9 @@
 <?php
+session_start();
+
 require_once('includes/dbFunctions.inc.php');
+echo $_POST['pass'];
+
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +41,14 @@ require_once('includes/dbFunctions.inc.php');
             <a class="navbar-brand" href="#">Profile Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="form-group">
-                    <input type="text" placeholder="Username" class="form-control">
+                    <input type="text" placeholder="Username" class="form-control" name = "user">
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
+                    <input type="password" placeholder="Password" class="form-control" name = "pass">
                 </div>
-                <button type="submit" class="btn btn-success">Log In</button>
-                <a class="btn btn-primary" href="signup.php" role="button">Sign Up</a>
+                <input type="submit" class="btn btn-success" value="login" name = "login">
             </form>
         </div>
     </div>
@@ -420,3 +423,17 @@ require_once('includes/dbFunctions.inc.php');
 </body>
 
 </html>
+
+
+<?php
+
+if (isset ($_POST['login'])){
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    echo ("<font color=white size='4pt'>" . $user . "<br>");
+    echo ("<font color=white size='4pt'>" . $pass . "<br>");
+    $loggedIn = login($user, $pass);
+    echo ("<font color=blue size='4pt'>" . $loggedIn);
+    $_SESSION['user']=$loggedIn;
+}
+?>

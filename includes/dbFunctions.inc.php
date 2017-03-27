@@ -13,6 +13,21 @@ function setConnection(){
     return $db;
 }
 
+function login($user, $pass){
+    $db = setconnection();
+    $temp = $db->prepare("SELECT Login_Name, Password FROM `Password`WHERE Login_Name = :userparam AND Password = :passparam;");
+
+    $temp->bindParam(':userparam', $user, PDO::PARAM_STR);
+    $temp->bindParam(':passparam', $pass, PDO::PARAM_STR);
+
+    $temp->execute();
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        $passback = ($r['Login_Name']);
+    }
+    return $passback;
+}
+
 function collegeList(){
     $db = setconnection();
     $query = "SELECT CollegeName FROM `Location` ORDER BY CollegeName";
