@@ -23,7 +23,7 @@ if (isset($_POST['logout'])){
     session_unset();
     session_destroy();
 }
-//END PAASSOWRD - LOGIN CODE
+//END PASSOWRD - LOGIN CODE
 
 ?>
 
