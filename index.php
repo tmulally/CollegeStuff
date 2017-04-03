@@ -1,8 +1,29 @@
 <?php
 session_start();
-
 require_once('includes/dbFunctions.inc.php');
-echo $_POST['pass'];
+
+//PASSWORD - LOGIN CODE
+$flag = 0;
+if (isset ($_POST['login'])){
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $loggedIn = login($user, $pass);
+
+    if ($loggedIn == "null"){
+        $flag = 1;
+    }
+
+    else{
+        $_SESSION['user']=$loggedIn;
+    }
+
+}
+
+if (isset($_POST['logout'])){
+    session_unset();
+    session_destroy();
+}
+//END PAASSOWRD - LOGIN CODE
 
 ?>
 
@@ -30,27 +51,16 @@ echo $_POST['pass'];
 <div class="container-fluid">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Profile Name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <div class="form-group">
-                    <input type="text" placeholder="Username" class="form-control" name = "user">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control" name = "pass">
-                </div>
-                <input type="submit" class="btn btn-success" value="login" name = "login">
-            </form>
-        </div>
+
+        <?php
+        if(isset($_SESSION['user'])){
+        include 'includes/loggedInHeader.inc.php';
+        }
+        else{
+        include 'includes/loggedOutHeader.inc.php';
+        }
+        ?>
+
     </div>
 </nav>
 </div>
@@ -423,17 +433,3 @@ echo $_POST['pass'];
 </body>
 
 </html>
-
-
-<?php
-
-if (isset ($_POST['login'])){
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-    echo ("<font color=white size='4pt'>" . $user . "<br>");
-    echo ("<font color=white size='4pt'>" . $pass . "<br>");
-    $loggedIn = login($user, $pass);
-    echo ("<font color=blue size='4pt'>" . $loggedIn);
-    $_SESSION['user']=$loggedIn;
-}
-?>

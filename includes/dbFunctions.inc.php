@@ -14,6 +14,7 @@ function setConnection(){
 }
 
 function login($user, $pass){
+    $passback = "null";
     $db = setconnection();
     $temp = $db->prepare("SELECT Login_Name, Password FROM `Password`WHERE Login_Name = :userparam AND Password = :passparam;");
 
