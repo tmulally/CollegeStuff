@@ -39,6 +39,7 @@ catch(Exception $e){}
 
 if (isset($_POST['password'])){
     newUser($Fname, $Lname, $email, $phone, $username, $college, $password);
+    header("Location: index.php");
 }
 
 
@@ -56,7 +57,6 @@ if (isset($_POST['password'])){
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
 
-    //js for validate pwd
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/validate_password.js"></script>
 
 
@@ -142,7 +142,7 @@ if (isset($_POST['password'])){
 
 
 
-                // Edit this password part! See "register_validate_pwd.html" for the code
+
 
 
 

@@ -23,5 +23,7 @@
                     <input type="password" placeholder="Password" class="form-control" name = "pass">
                 </div>
                 <input type="submit" class="btn btn-success" value="login" name = "login">
+                <a class="btn btn-success" href="signup.php" role="button">Sign Up</a>
             </form>
+
         </div>
