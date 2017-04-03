@@ -15,6 +15,7 @@ if (isset ($_POST['login'])){
 
     else{
         $_SESSION['user']=$loggedIn;
+        header("Location: index.php");
     }
 
 }
@@ -22,6 +23,7 @@ if (isset ($_POST['login'])){
 if (isset($_POST['logout'])){
     session_unset();
     session_destroy();
+    header("Location: index.php");
 }
 //END PASSWORD - LOGIN CODE
 
@@ -77,19 +79,7 @@ if (isset($_POST['logout'])){
 
         <div class="form-group">
 
-        <button type="button" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> BUY</button>
         <a class="btn btn-warning btn-block" href="add_classified.php" role="button"><i class="glyphicon glyphicon-usd"></i>SELL</a>
-
-        </div>
-
-        <div class="form-group">
-            <select id="campus" class="form-control">
-                <option value="0" selected="selected">Select Campus</option>
-                <option value="1">Gallaudet University</option>
-                <option value="32">American University</option>
-                <option value="4">Howard University</option>
-                <option value="5">Georgetown University</option>
-            </select>
 
         </div>
 
@@ -103,6 +93,18 @@ if (isset($_POST['logout'])){
                     </div>
                 </div>
         </form>
+
+        <div class="form-group">
+            <select id="campus" class="form-control">
+                <option value="0" selected="selected">Select Campus</option>
+                <option value="1">Gallaudet University</option>
+                <option value="32">American University</option>
+                <option value="4">Howard University</option>
+                <option value="5">Georgetown University</option>
+            </select>
+
+        </div>
+
 
         <div class="panel panel-default">
                     <div class="panel-heading">
