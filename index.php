@@ -23,7 +23,7 @@ if (isset($_POST['logout'])){
     session_unset();
     session_destroy();
 }
-//END PASSOWRD - LOGIN CODE
+//END PASSWORD - LOGIN CODE
 
 ?>
 
@@ -78,7 +78,7 @@ if (isset($_POST['logout'])){
         <div class="form-group">
 
         <button type="button" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> BUY</button>
-        <button type="button" class="btn btn-warning btn-block"><i class="glyphicon glyphicon-usd"></i> SELL</button>
+        <a class="btn btn-warning btn-block" href="add_classified.php" role="button"><i class="glyphicon glyphicon-usd"></i>SELL</a>
 
         </div>
 

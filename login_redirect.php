@@ -1,3 +1,29 @@
+<?php
+session_start();
+require_once('includes/dbFunctions.inc.php');
+
+//PASSWORD - LOGIN CODE
+$flag = 0;
+if (isset ($_POST['login'])){
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $loggedIn = login($user, $pass);
+
+    if ($loggedIn == "null"){
+        $flag = 1;
+    }
+
+    else{
+        $_SESSION['user']=$loggedIn;
+        header("Location: index.php");
+    }
+
+}
+
+//END PASSWORD - LOGIN CODE
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +49,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                            <input type="text" class="form-control" name="user" id="user"  placeholder="Enter your Username"/>
                         </div>
                     </div>
                 </div>
@@ -33,15 +59,19 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                            <input type="password" class="form-control" name="pass" id="pass"  placeholder="Enter your Password"/>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group ">
-                    <a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Log in</a>
+                    <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="login" name = "login">
                 </div>
-
+                <?php
+                if ($flag == 1){
+                    echo("<div class='form-group'>Wrong username or password</div>");
+                }
+                ?>
             </form>
         </div>
     </div>
