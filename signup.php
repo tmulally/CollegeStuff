@@ -161,9 +161,8 @@ if (isset($_POST['password'])){
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password"/>
-
-
+                            <input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password" onkeyup="checkPass(); return false;">
+                                        <span id="confirmMessage" class="confirmMessage"></span>/>
 
 
 
