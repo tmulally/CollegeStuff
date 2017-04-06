@@ -97,10 +97,7 @@ if (isset($_POST['logout'])){
         <div class="form-group">
             <select id="campus" class="form-control">
                 <option value="0" selected="selected">Select Campus</option>
-                <option value="1">Gallaudet University</option>
-                <option value="32">American University</option>
-                <option value="4">Howard University</option>
-                <option value="5">Georgetown University</option>
+                <?php signupCollegeList(); ?>
             </select>
 
         </div>
@@ -131,7 +128,15 @@ if (isset($_POST['logout'])){
                  <div class="panel-body">
                     <img src="bootstrap-3.3.7-dist/images/th.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
                      <br><br>
-                     <p><b>Jennifer Lopez</b></p>
+                     <p><b>
+                         <?php
+                         if(isset ($_SESSION['user'])){
+                             echo ($_SESSION['user']);}
+                         else{
+                             echo('john doe');
+                         }
+                         ?>
+                         </b></p>
                      <a class="btn btn-info" href="profile.html" role="button">View my Profile</a>
                 </div>
         </div>
