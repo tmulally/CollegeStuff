@@ -105,7 +105,7 @@ if (isset($_POST['password'])){
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="phone" id="phone"  placeholder="Enter your Email"/>
+                            <input type="text" class="form-control" name="phone" id="phone"  placeholder="Enter your phone"/>
                         </div>
                     </div>
                 </div>
