@@ -79,6 +79,17 @@ function signupCollegeList(){
     }
 }
 
+function signupCategoryList(){
+    $db = setconnection();
+    $query = "SELECT Category_ID, CategoryName FROM `Category` ORDER BY `CategoryName` ASC";
+
+    $temp = $db->query($query);
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        echo ("<option value='" . $r['Category_ID'] . "'>" . $r['CategoryName'] . "</option>");
+    }
+}
+
 function newUser($Fname, $Lname, $email, $phone, $username, $college, $password){
         $db = setconnection();
         $temp = $db->prepare("INSERT INTO `Password` (`Login_Name`, `Password`) VALUES (:userparam, :passparam);");
@@ -99,4 +110,36 @@ function newUser($Fname, $Lname, $email, $phone, $username, $college, $password)
         $temp2->execute();
 
 
+}
+
+function uploadImage($File){
+    $ok=1;
+    $filetype= $_FILES['uploadedfile']['type'];
+
+
+    //This is our limit file type condition
+    if ($filetype =="image/jpeg" ||  $filetype =="image/png")
+    {
+        $ok=0;
+    }
+    else
+    {
+        return "type";
+    }
+
+    $temp = explode(".", $_FILES["uploadedfile"]["name"]);
+    $newfilename = round(microtime(true)) . '.' . end($temp);
+
+    if ( $ok == 0)
+    {
+        if(move_uploaded_file($_FILES["uploadedfile"]["tmp_name"], "images/" . $newfilename)){
+            echo "<br> The file ".  basename( $_FILES['uploadedfile']['name']). " has been uploaded.";
+            return $newfilename;
+        }
+
+        else{
+            echo "There was an error uploading the file, please try again!";
+            return "error";
+        }
+    }
 }

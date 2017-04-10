@@ -79,8 +79,6 @@ if (isset($_POST['logout'])){
 
         <div class="form-group">
 
-        <a class="btn btn-warning btn-block" href="add_classified.php" role="button"><i class="glyphicon glyphicon-usd"></i> <b>SELL</b></a>
-
         </div>
 
         <form role="form" id="form-buscar">
