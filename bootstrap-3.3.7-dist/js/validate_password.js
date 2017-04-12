@@ -28,30 +28,3 @@ function checkPass() {
         message.innerHTML = "Passwords Do Not Match!"
     }
 }
-
-function mask(f){
-    tel='(';
-    var val =f.value.split('');
-    for(var i=0; i<val.length; i++){
-        if( val[i]=='(' ){
-            val[i]=''
-        }
-        if( val[i]==')' ){
-            val[i]=''
-        }
-        if( val[i]=='-' ){
-            val[i]=''
-        }
-        if( val[i]=='' ){
-            val[i]=''
-        }
-    }
-//
-    for(var i=0; i<val.length; i++){
-        if(i==3){ val[i]=val[i]+')' }
-        if(i==7){ val[i]=val[i]+'-' }
-        if(i==10){ val[i]=val[i]+'-' }
-        tel=tel+val[i]
-    }
-    f.value=tel;
-}

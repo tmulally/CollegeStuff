@@ -55,28 +55,25 @@ if (isset($_POST['password'])){
     <link href="favicon.ico" rel="shortcut icon">
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-    //Password validation js
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/validate_password.js"></script>
 
-    //Phone # validation js
     <script src="bootstrap-3.3.7-dist/js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery.maskedinput.js" type="text/javascript"></script>
     <script type="text/javascript">
+        $(function() {
+            $.mask.definitions['~'] = "[+-]";
+            $(".phone1").mask("(999) 999-9999");
 
-    $(function() {
-        $.mask.definitions['~'] = "[+-]";
-        $(".phone1").mask("(999) 999-9999");
-
-        $("input").blur(function() {
-            $("#info").html("Unmasked value: " + $(this).mask());
+            $("input").blur(function() {
+                $("#info").html("Unmasked value: " + $(this).mask());
             }).dblclick(function() {
                 $(this).unmask();
-                });
             });
-            </script>
+        });
 
-<title>CollegeStuff</title>
+    </script>
+
+    <title>CollegeStuff</title>
 </head>
 <body>
 <div class="container">
@@ -116,14 +113,14 @@ if (isset($_POST['password'])){
                 </div>
 
                 <div class="form-group">
-                                    <label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
-                                    <div class="cols-sm-10">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control phone1" id="phone"  placeholder="(555) 555-5555"/>
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control phone1" id="phone"  placeholder="(555) 555-5555"/>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label for="username" class="cols-sm-2 control-label">Username</label>
@@ -140,10 +137,10 @@ if (isset($_POST['password'])){
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                              <select class="form-control" name="college">
-                                  <option value = "0">Select a College</option>
-                                  <?php signupCollegeList(); ?>
-                              </select>
+                            <select class="form-control" name="college">
+                                <option value = "0">Select a College</option>
+                                <?php signupCollegeList(); ?>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -164,7 +161,7 @@ if (isset($_POST['password'])){
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                             <input type="password" class="form-control" name="pass2" id="pass2" on placeholder="Confirm your Password" onkeyup="checkPass(); return false;">
-                                        <span id="confirmMessage" class="confirmMessage"></span>
+                            <span id="confirmMessage" class="confirmMessage"></span>
                         </div>
                     </div>
                 </div>
@@ -179,10 +176,7 @@ if (isset($_POST['password'])){
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-//js below is unnecessary so it is commented out
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 </body>
