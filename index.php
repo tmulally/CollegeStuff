@@ -149,11 +149,8 @@ if (isset($_POST['logout'])){
                 <div class="tab-pane active" id="tab1" role="tabpanel">
 
                     <!--WINDOW STUFF BUY-->
-                    <div id="myModal" class="modal fade bs-example-modal-lg">
 
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <?php displayListingBigNoLocation(); ?>
-                    </div>
 
 
                     <!--STUFF THUMBNAIL-->
