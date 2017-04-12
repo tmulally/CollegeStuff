@@ -63,7 +63,6 @@ function displayListingThumbNoLocation(){
             <a href = "' . $modal . '" data-toggle="modal">' . $r['Title'] . '</a>
 
             </h4>
-            <p>' . $r['Description'] . '</p>
             </div>
             </div>
             </div>
