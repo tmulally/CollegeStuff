@@ -16,7 +16,7 @@ if($_POST){
                     echo("success");
                     $price = round($_POST['price']);
                     newListing($_POST['title'], $_POST['desc'], $price, $uploaded, $_SESSION['user'], $_POST['campus'], $_POST['category']);
-                    header('Location: index.php');
+                    header('Location: sell_confirmation.html');
                 }
 
                 else{

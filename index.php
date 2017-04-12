@@ -219,7 +219,7 @@ if (isset($_POST['logout'])){
             <br>
             <ul class="bottom_ul">
                 <li><a href="#">collegestuff.com</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
             </ul>
             <br>
         </div>

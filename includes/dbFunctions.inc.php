@@ -47,22 +47,22 @@ function collegeList(){
 function displayListingThumbNoLocation(){
 
     $db = setconnection();
-    $query = "SELECT DISTINCT Title, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
+    $query = "SELECT DISTINCT Title, Listing_ID, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
 
     $temp = $db->query($query);
     $temp->setFetchMode(PDO::FETCH_ASSOC);
     while ($r = $temp->fetch()){
+        $modal = "#myModal" . $r['Listing_ID'];
         echo('
             <div class="col-sm-3 col-lg-3 col-md-3">
             <div class="thumbnail">
-            <img src="images/' . $r['Path'] . '" alt="">
+            <img src="images/' . $r['Path'] . '" alt="" height="200" width="320">
             <div class="caption">
-            <h4 class="pull-right"><span class="itemPrice2">' . $r['Price'] . '</span></h4>
+            <h4 class="pull-right"><span class="itemPrice2">$' . $r['Price'] . '</span></h4>
             <h4>
-            <a href = "#myModal" data-toggle="modal">' . $r['Title'] . '</a>
+            <a href = "' . $modal . '" data-toggle="modal">' . $r['Title'] . '</a>
 
             </h4>
-            <p>' . $r['Description'] . '</p>
             </div>
             </div>
             </div>
@@ -74,13 +74,14 @@ function displayListingThumbNoLocation(){
 function displayListingBigNoLocation(){
 
     $db = setconnection();
-    $query = "SELECT DISTINCT Email, Title, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
+    $query = "SELECT DISTINCT Email, Listing_ID, Title, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
 
     $temp = $db->query($query);
     $temp->setFetchMode(PDO::FETCH_ASSOC);
     while ($r = $temp->fetch()){
+        $modal = "myModal" . $r['Listing_ID'];
         echo('
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade" id="' . $modal . '" role="dialog">
             <div class="modal-dialog modal-lg">
             <div class="modal-content">
             <div class="modal-body">
