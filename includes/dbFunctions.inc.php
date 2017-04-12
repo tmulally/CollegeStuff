@@ -13,10 +13,12 @@ function setConnection(){
     return $db;
 }
 
+//-------------------------------------------------------Login code-----------------------------------------------------------
+
 function login($user, $pass){
     $passback = "null";
     $db = setconnection();
-    $temp = $db->prepare("SELECT Login_Name, Password FROM `Password`WHERE Login_Name = :userparam AND Password = :passparam;");
+    $temp = $db->prepare("SELECT Login_Name, Password FROM `Password` WHERE Login_Name = :userparam AND Password = :passparam;");
 
     $temp->bindParam(':userparam', $user, PDO::PARAM_STR);
     $temp->bindParam(':passparam', $pass, PDO::PARAM_STR);
@@ -29,6 +31,8 @@ function login($user, $pass){
     return $passback;
 }
 
+//--------------------------------------General functions used throughout page------------------------------------------------
+
 function collegeList(){
     $db = setconnection();
     $query = "SELECT CollegeName FROM `Location` ORDER BY CollegeName";
@@ -40,6 +44,76 @@ function collegeList(){
     }
 }
 
+function displayListingThumbNoLocation(){
+
+    $db = setconnection();
+    $query = "SELECT DISTINCT Title, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
+
+    $temp = $db->query($query);
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        echo('
+            <div class="col-sm-3 col-lg-3 col-md-3">
+            <div class="thumbnail">
+            <img src="images/' . $r['Path'] . '" alt="">
+            <div class="caption">
+            <h4 class="pull-right"><span class="itemPrice2">' . $r['Price'] . '</span></h4>
+            <h4><a href="#myModal" data-toggle="modal" data-target=".bs-example-modal-lg">' . $r['Title'] . '</a>
+            </h4>
+            <p>' . $r['Description'] . '</p>
+            </div>
+            </div>
+            </div>
+            ');
+
+    }
+}
+
+function displayListingBigNoLocation(){
+
+    $db = setconnection();
+    $query = "SELECT DISTINCT Email, Title, Description, Price, Path FROM Listings, Users WHERE users.User_ID = Listings.User_ID LIMIT 20";
+
+    $temp = $db->query($query);
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        echo('
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title">Stuff Description</h2>
+            </div>
+            <div class="modal-body">
+            <div class="row">
+            <div class="col-md-12">
+            <div class="panel panel-default  panel--styled">
+            <div class="panel-body">
+            <div class="col-md-12 panelTop">
+            <div class="col-md-6">
+            <img class="img-responsive" src="images/' . $r['Path'] . '" alt=""/>
+            </div>
+            <div class="col-md-6">
+            <h2>' . $r['Title'] . '</h2>
+            <p>' . $r['Description'] . '</p>
+            <br>
+            <h4>Price<span class="itemPrice"> $' . $r['Price'] . '</span></h4>
+            <h4>Email<span class="itemEmail"> ' . $r['Email'] . '</span></h4>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+                    </div>
+                    </div>
+            ');
+
+    }
+}
+
+
+//---------------------For left rail category list on index.php------------------------
 function categoryName(){
     $db = setconnection();
     $query = "SELECT CategoryName FROM Category ORDER BY CategoryName LIMIT 5";
@@ -68,6 +142,8 @@ function categoryNameBonus(){
     }
 }
 
+//-----------------college and category functions meant for dropdown lists-----------------
+
 function signupCollegeList(){
     $db = setconnection();
     $query = "SELECT Location_ID, CollegeName FROM `Location` ORDER BY CollegeName";
@@ -90,6 +166,10 @@ function signupCategoryList(){
     }
 }
 
+
+//------------------------------------------------Uploading to Database code below---------------------------------------------
+
+
 function newUser($Fname, $Lname, $email, $phone, $username, $college, $password){
         $db = setconnection();
         $temp = $db->prepare("INSERT INTO `Password` (`Login_Name`, `Password`) VALUES (:userparam, :passparam);");
@@ -108,8 +188,6 @@ function newUser($Fname, $Lname, $email, $phone, $username, $college, $password)
         $temp2->bindParam(':userparam', $username, PDO::PARAM_STR);
 
         $temp2->execute();
-
-
 }
 
 function uploadImage($File){
@@ -142,4 +220,38 @@ function uploadImage($File){
             return "error";
         }
     }
+}
+
+function newListing($title, $desc, $price, $path, $user, $location, $category){
+    $userID = getUserID($user);
+
+    $db = setconnection();
+
+    $temp = $db->prepare("INSERT INTO `Listings`(`Title`, `Description`, `Price`, `Path`, `User_ID`, `Location_ID`, `Category_ID`) VALUES (:titleparam, :descparam, :priceparam, :pathparam, :userIDparam, :locationparam, :categoryparam);");
+    $temp->bindParam(':titleparam', $title, PDO::PARAM_STR);
+    $temp->bindParam(':descparam', $desc, PDO::PARAM_STR);
+    $temp->bindParam(':priceparam', $price, PDO::PARAM_INT);
+    $temp->bindParam(':pathparam', $path, PDO::PARAM_STR);
+    $temp->bindParam(':userIDparam', $userID, PDO::PARAM_INT);
+    $temp->bindParam(':locationparam', $location, PDO::PARAM_INT);
+    $temp->bindParam(':categoryparam', $category, PDO::PARAM_INT);
+
+    $temp->execute();
+
+
+}
+
+function getUserID($user){
+    $passback = "null";
+    $db = setconnection();
+
+    $temp = $db->prepare("SELECT User_ID FROM Users WHERE Users.Login_Name = :userparam;");
+    $temp->bindParam(':userparam', $user, PDO::PARAM_STR);
+
+    $temp->execute();
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        $passback = ($r['User_ID']);
+    }
+    return $passback;
 }

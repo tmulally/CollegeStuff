@@ -6,17 +6,33 @@ require_once('includes/dbFunctions.inc.php');
 if(!isset($_SESSION['user'])){ //if login in session is not set
     header("Location: login_redirect.php");
 }
+if($_POST){
+    if(!empty($_POST['title']) && !empty($_POST['desc']) && !empty($_POST['price']) && !empty($_POST['campus']) && !empty($_POST['category'])){
+        echo ($_POST['title']);
+        if(isset($_FILES['uploadedfile'])){
+            if($_FILES['uploadedfile']['size']!=0){
+                $uploaded = uploadImage($_FILES['uploadedfile']);
+                if($uploaded != "type" && $uploaded != "error"){
+                    echo("success");
+                    $price = round($_POST['price']);
+                    newListing($_POST['title'], $_POST['desc'], $price, $uploaded, $_SESSION['user'], $_POST['campus'], $_POST['category']);
+                }
 
-if(isset($_POST['campus'])){
-    if($_POST['campus'] != 0){
-        echo('works');
+                else{
+                    echo("Incorrect image file type.");
+                }
+
+            }
+
+            else{
+                echo("Please upload an image.");
+            }
+
+        }
     }
-}
 
-if(isset($_FILES['uploadedfile'])){
-    if($_FILES['uploadedfile']['size']!=0){
-        $uploaded = uploadImage($_FILES['uploadedfile']);
-        echo($uploaded);
+    else{
+        echo("Please fill out all fields.");
     }
 }
 
@@ -69,7 +85,7 @@ if(isset($_FILES['uploadedfile'])){
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="input-group" style="width: 150px;">
-                                        <input type="text" class="form-control" name="price" placeholder="0.00">
+                                        <input type="text" class="form-control" name="price" placeholder="$0">
                                         <span class="input-group-addon">$</span>
                                     </div>
                                 </div>
@@ -93,7 +109,6 @@ if(isset($_FILES['uploadedfile'])){
                                 <?php signupCategoryList(); ?>
                             </select>
                         </div>
-                        <h3 class="panel-title">Classified image</h3>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">

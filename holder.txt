@@ -1,0 +1,2 @@
+SELECT DISTINCT Users.Email, Listings.Title, Listings.Description, Listings.Price, Listings.Path FROM Listings, Users WHERE Listings.Location_ID = 5 AND users.User_ID = Listings.User_ID
+
