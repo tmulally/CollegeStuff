@@ -56,7 +56,7 @@ function displayListingThumbNoLocation(){
         echo('
             <div class="col-sm-3 col-lg-3 col-md-3">
             <div class="thumbnail">
-            <img src="images/' . $r['Path'] . '" alt="" height="200" width="320">
+            <img src="images/' . $r['Path'] . '" alt="" style="height:150px;">
             <div class="caption">
             <h4 class="pull-right"><span class="itemPrice2">$' . $r['Price'] . '</span></h4>
             <h4>

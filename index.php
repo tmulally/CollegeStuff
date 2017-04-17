@@ -76,47 +76,42 @@ if (isset($_POST['logout'])){
 <div class="container-fluid">
 
     <div class="col-md-2">
-
-        <div class="form-group">
-
-        </div>
-
-        <form role="form" id="form-buscar">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required/>
-                        <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">
-                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i></button></span>
-                    </div>
-                </div>
-        </form>
-
-        <div class="form-group">
-            <select id="campus" class="form-control">
-                <option value="0" selected="selected">Select Campus</option>
-                <?php signupCollegeList(); ?>
-            </select>
-
-        </div>
-
-
         <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Categories</h1>
-                    </div>
-                    <div class="list-group">
-                        <?php categoryName(); ?>
-                        <div id="MainMenu">
-                            <div class="list-group panel">
-                                <a href="#demo3" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><b>More...</b></a>
-                                <div class="collapse" id="demo3">
-                                    <?php categoryNameBonus(); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="panel-heading">
+                <h1 class="panel-title"><i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search </h1>
+            </div>
+            <form role = "form" id="form-buscar">
+
+            <div class="form-group">
+                <div class="input-group">
+                <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required/>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <select name="campus" class="form-control">
+                    <option value="0" selected="selected">Select Campus</option>
+                    <?php signupCollegeList(); ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select name="campus" class="form-control">
+                    <option value="0" selected="selected">Select Category</option>
+                    <option value="0">All</option>
+                    <?php signupCategoryList(); ?>
+                </select>
+
+            </div>
+
+            <div class="form-group ">
+                <span class="input-group-btn">
+                    <input type="submit" class="btn btn-success btn-block" name="search" value="Search!"/>
+                </span>
+            </div>
+
+            </form>
+        </div>
 
         <div class="panel panel-default">
                 <div class="panel-heading">
@@ -212,7 +207,7 @@ if (isset($_POST['logout'])){
     <div class="container-fluid">
         <div class="col-md-8">
             <br>
-            <p>© CollegeStuff 2017 - Web Designer & Developer By ITS 492 Students - Gallaudet University</p>
+            <p>© CollegeStuff 2017 - Website Designed & Developed By ITS 492 Students - Gallaudet University</p>
             <br>
         </div>
         <div class="col-md-4">
