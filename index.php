@@ -166,50 +166,11 @@ if(isset($_POST['search'])){
 
                 </div>
 
-                <!--NEED DATABASE PAGINATION-->
-                <div class="tab-pane" id="tab2" role="tabpanel">
+        <!--Pagination code goes below here-->
 
+        </div>
 
-                </div>
-
-                <div class="tab-pane" id="tab3" role="tabpanel">
-
-                </div>
-
-                <div class="tab-pane" id="tab4" role="tabpanel">
-
-                </div>
-
-                <div class="tab-pane" id="tab5" role="tabpanel">
-
-                </div>
-
-            </div>
-
-            <!--NEED DATABASE NEW PAGINATION-->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <ul class="pagination" role="tablist">
-                        <li class="previous" onclick="goTo(1);"><a href="#"><span aria-hidden="true">←</span> Previous</a></li>
-                        <li class="active" id="first">
-                            <a aria-controls="tab1" data-toggle="tab" href="#tab1" role="tab">1</a>
-                        </li>
-                        <li>
-                            <a aria-controls="tab2" data-toggle="tab" href="#tab2" role="tab">2</a>
-                        </li>
-                        <li>
-                            <a aria-controls="tab3" data-toggle="tab" href="#tab3" role="tab">3</a>
-                        </li>
-                        <li>
-                            <a aria-controls="tab4" data-toggle="tab" href="#tab4" role="tab">4</a>
-                        </li>
-                        <li id="last">
-                            <a aria-controls="tab5" data-toggle="tab" href="#tab5" role="tab">5</a>
-                        </li>
-                        <li class="next" onclick="goTo(2);"><a href="#">Next <span aria-hidden="true">→</span></a></li>
-                    </ul>
-                </div>
-            </div>
+        <!--Pagination code goes above here-->
 
     </div>
 
