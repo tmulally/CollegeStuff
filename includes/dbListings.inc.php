@@ -15,6 +15,8 @@ function displayListingThumb($search, $location, $category){
         $query .= ' AND Listings.Title LIKE  "' . $search . '"';
     }
 
+    $query .= ' ORDER BY Listings.Listing_ID DESC;';
+
     $temp = $db->query($query);
     $temp->setFetchMode(PDO::FETCH_ASSOC);
     while ($r = $temp->fetch()){
@@ -53,6 +55,8 @@ function displayListingBig($search, $location, $category){
     if ($search != 'no'){
         $query .= ' AND Listings.Title LIKE  "' . $search . '"';
     }
+
+    $query .= ' ORDER BY Listings.Listing_ID DESC;';
 
     $temp = $db->query($query);
     $temp->setFetchMode(PDO::FETCH_ASSOC);
