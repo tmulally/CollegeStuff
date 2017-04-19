@@ -155,6 +155,8 @@ if($_POST){
                         <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Submit">
                     </div>
 
+                    <div>Or <a href = "index.php" style="color:khaki;"> go back... </a></div>
+
                 </form>
             </div>
         </div>
