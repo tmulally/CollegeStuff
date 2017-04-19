@@ -8,7 +8,6 @@ if(!isset($_SESSION['user'])){ //if login in session is not set
 }
 if($_POST){
     if(!empty($_POST['title']) && !empty($_POST['desc']) && !empty($_POST['price']) && !empty($_POST['campus']) && !empty($_POST['category'])){
-        echo ($_POST['title']);
         if(isset($_FILES['uploadedfile'])){
             if($_FILES['uploadedfile']['size']!=0){
                 $uploaded = uploadImage($_FILES['uploadedfile']);

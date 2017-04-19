@@ -79,12 +79,6 @@
                     </div>
                     </div>
 
-
-
-
-
-
-
                     <div class="form-group">
                         <label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
                         <div class="cols-sm-10">
@@ -94,16 +88,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
 
                     <div class="form-group">
                     <label for="username" class="cols-sm-2 control-label">Username</label>

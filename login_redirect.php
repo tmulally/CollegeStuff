@@ -73,6 +73,7 @@ if (isset ($_POST['login'])){
                 }
                 ?>
             </form>
+            <p>Or <a href = "signup.php" style="color:khaki;"> sign up... </a></p>
         </div>
     </div>
 </div>
