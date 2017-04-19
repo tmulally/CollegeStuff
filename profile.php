@@ -25,81 +25,18 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="navbar-wrapper">
-                <div class="container-fluid">
-                    <div class="navbar navbar-default navbar-static-top" role="navigation">
-                        <div class="container-fluid">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                                        class="icon-bar"></span><span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="index.php" style="margin-right:-8px; margin-top:-5px;">
-                                    <img alt="Brand" src="favicon.ico" width="30px" height="30px">
-                                </a>
-                                <a class="navbar-brand" href="index.php">CollegeStuff</a>
 
-                            </div>
-                            <div class="navbar-collapse collapse">
-
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
-                                        <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" class="img-responsive img-circle" title="John Doe" alt="John Doe" width="30px" height="30px">
-                                    </span>
-                                        <span class="user-name">
-                                        John Doe
-                                    </span>
-                                        <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <div class="navbar-content">
-                                                    <div class="row">
-                                                        <div class="col-md-5">
-                                                            <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" alt="Alternate Text" class="img-responsive" width="120px" height="120px" />
-                                                            <p class="text-center small">
-                                                                <a href="./3X6zm">Change Photo</a></p>
-                                                        </div>
-                                                        <div class="col-md-7">
-                                                            <span>John Doe</span>
-                                                            <p class="text-muted small">
-                                                                example@pods.tld</p>
-                                                            <div class="divider">
-                                                            </div>
-                                                            <a href="" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
-                                                            <a href="contact_us.html" class="btn btn-default btn-xs"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help!</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navbar-footer">
-                                                    <div class="navbar-footer-content">
-                                                        <div class="row">
-                                                            <div class="container-fluid">
-                                                                <a href="#" class="btn btn-default btn-sm pull-right"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div style="padding-top:50px;"> </div>
             <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="media">
                             <div align="center">
-                                <img class="thumbnail img-responsive" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="300px" height="300px">
+                                <img class="thumbnail img-responsive" src="images/1492023704.jpg" width="300px" height="300px">
                             </div>
                             <div class="media-body">
                                 <hr>
-                                <h3><strong>Biography</strong></h3>
+                                <h3><strong>My Full Name</strong></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <hr>
                                 <h3><strong>College / University</strong></h3>
@@ -116,7 +53,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;">My Profile </h1>
+                        <h1 class="panel-title pull-left" style="font-size:30px;">Edit my Profile </h1>
                         </span>
                     </div>
                 </div>
@@ -129,13 +66,13 @@
                                 <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
-                                            <label class="col-lg-3 control-label">First name:</label>
+                                            <label class="col-lg-3 control-label">First Name:</label>
                                             <div class="col-lg-8">
                                                 <input class="form-control" type="text" placeholder="Enter your First name" >
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 control-label">Last name:</label>
+                                            <label class="col-lg-3 control-label">Last Name:</label>
                                             <div class="col-lg-8">
                                                 <input class="form-control" type="text" placeholder="Enter your Last name">
                                             </div>
@@ -192,16 +129,19 @@
 </div>
 
 <div class="copyright">
-    <div class="container">
-        <div class="col-md-6">
-            <p>© CollegeStuff 2017 - All Rights</p>
+    <div class="container-fluid">
+        <div class="col-md-8">
+            <br>
+            <p>© CollegeStuff 2017 - Web Designer & Developer By ITS 492 Students - Gallaudet University</p>
+            <br>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <br>
             <ul class="bottom_ul">
-                <li><a href="#">collegestuff.com</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="index.php">collegestuff.com</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
             </ul>
+            <br>
         </div>
     </div>
 </div>
