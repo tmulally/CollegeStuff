@@ -6,6 +6,7 @@ require_once('includes/dbFunctions.inc.php');
 if(!isset($_SESSION['user'])){ //if login in session is not set
     header("Location: login_redirect.php");
 }
+
 if($_POST){
     if(!empty($_POST['title']) && !empty($_POST['desc']) && !empty($_POST['price']) && !empty($_POST['campus']) && !empty($_POST['category'])){
         if(isset($_FILES['uploadedfile'])){

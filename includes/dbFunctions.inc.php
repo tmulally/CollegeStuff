@@ -152,3 +152,76 @@ function getUserID($user){
     }
     return $passback;
 }
+
+//----------------------------------------Profile code below - includes delete-----------------------------
+
+function profileListing($user){
+    $userID = getUserID($user);
+
+    $db = setconnection();
+    $temp = $db->prepare("SELECT Listing_ID, Title FROM `Listings` WHERE User_ID = :userparam;");
+
+    $temp->bindParam(':userparam', $userID, PDO::PARAM_INT);
+
+    $temp->execute();
+    $temp->setFetchMode(PDO::FETCH_ASSOC);
+    while ($r = $temp->fetch()){
+        echo(
+            '<tr>
+                <td>' . substr($r['Title'], 0, 16) . '</td>
+                <td><input type="submit" class="btn btn-danger btn-xs" name="deleteItem" value="' . $r['Listing_ID'] . '" style="color: red; border-radius: 5px; width: 50%"></td>
+            </tr>'
+        );
+    }
+}
+
+function userInfo($user){
+    $id = getUserID($user);
+
+    $db = setconnection();
+    $temp = $db->prepare("SELECT FirstName, LastName, Email, Phone, CollegeName FROM Users, Location WHERE Location.Location_ID = Users.Location_ID AND User_ID =  :userparam;");
+    $temp->bindParam(':userparam', $id, PDO::PARAM_INT);
+    $temp->execute();
+    while ($r = $temp->fetch()){
+        echo('
+            <hr>
+            <p>Name: ' . $r['FirstName'] . ' ' . $r['LastName'] . '</p>
+            <hr>
+            <p>Email: ' . $r['Email'] . '</p>
+            <hr>
+            <p>Phone: ' . $r['Phone'] . '</p>
+            <hr>
+            <p>Location: ' . $r['CollegeName'] . '</p>
+        ');
+    }
+}
+
+function deleteListing($id){
+
+    deleteImage($id);
+
+    $db = setconnection();
+    $temp = $db->prepare("DELETE FROM `Listings` WHERE Listing_ID =  :deleteparam;");
+    $temp->bindParam(':deleteparam', $id, PDO::PARAM_INT);
+    $temp->execute();
+}
+
+function deleteImage($id){
+
+    $img = null;
+
+    $db = setconnection();
+    $temp = $db->prepare("SELECT Path FROM `Listings` where Listing_ID = :imgparam;");
+    $temp->bindParam(':imgparam', $id, PDO::PARAM_INT);
+    $temp->execute();
+    while ($r = $temp->fetch()){
+        $img = ($r['Path']);
+    }
+
+    $imgPath = "images/" . $img;
+
+    try{
+        unlink($imgPath);
+    }
+    catch(Exception $e){}
+}

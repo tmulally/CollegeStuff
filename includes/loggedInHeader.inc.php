@@ -11,7 +11,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
-                <input type="submit" class="btn btn-success" value="logout" name = "logout">
+                <input type="submit" class="btn btn-danger" value="logout" name = "logout">
 
             </form>
 

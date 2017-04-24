@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+require_once("includes/dbFunctions.inc.php");
+
+if(!isset($_SESSION['user'])){ //if login in session is not set
+    header("Location: login_redirect.php");
+}
+
+if(isset($_POST['deleteItem'])){
+    deleteListing($_POST['deleteItem']);
+    header("Location: profile.php");
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -31,19 +47,11 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="media">
-                            <div align="center">
-                                <img class="thumbnail img-responsive" src="images/1492023704.jpg" width="300px" height="300px">
-                            </div>
                             <div class="media-body">
+                                <h3><strong>My Information</strong></h3>
+                                <?php userInfo($_SESSION['user']); ?>
                                 <hr>
-                                <h3><strong>My Full Name</strong></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <hr>
-                                <h3><strong>College / University</strong></h3>
-                                <p>Earth</p>
-                                <hr>
-                                <h3><strong>Birthday</strong></h3>
-                                <p>January 01 1901</p>
+                                <a href = index.php><input type="btn" class="btn btn-primary btn-block" value="Go Back"style="border-radius: 5px;"/></a>
                             </div>
                         </div>
                     </div>
@@ -53,71 +61,29 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;">Edit my Profile </h1>
+                        <h1 class="panel-title pull-left" style="font-size:30px;">My Listings </h1>
                         </span>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <div class="container-fluid" style="padding-top: 60px;">
-
+                        <div class="container-fluid" style="padding-top: 10px;">
                             <div class="row">
-
                                 <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">First Name:</label>
-                                            <div class="col-lg-8">
-                                                <input class="form-control" type="text" placeholder="Enter your First name" >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Last Name:</label>
-                                            <div class="col-lg-8">
-                                                <input class="form-control" type="text" placeholder="Enter your Last name">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">College/University:</label>
-                                            <div class="col-lg-8">
-                                                <input class="form-control" placeholder="Enter your College/University name" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Email:</label>
-                                            <div class="col-lg-8">
-                                                <input class="form-control" placeholder="Enter your Email" type="email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Username:</label>
-                                            <div class="col-md-8">
-                                                <input class="form-control" placeholder="Enter your Username" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">New password:</label>
-                                            <div class="col-md-8">
-                                                <input class="form-control" placeholder="Enter your Password" type="password">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Confirm new password:</label>
-                                            <div class="col-md-8">
-                                                <input class="form-control" placeholder="Enter your New password" type="password">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label"></label>
-                                            <div class="col-md-8">
-                                                <br>
-                                                <input class="btn btn-primary" value="Save Changes" type="button">
-                                                <span></span>
-                                                <input class="btn btn-default" value="Cancel" type="reset">
-                                            </div>
-                                        </div>
+                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                                        <table class = "table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Listing</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php profileListing($_SESSION['user']); ?>
+                                            </tbody>
+                                        </table>
                                     </form>
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +98,7 @@
     <div class="container-fluid">
         <div class="col-md-8">
             <br>
-            <p>© CollegeStuff 2017 - Web Designer & Developer By ITS 492 Students - Gallaudet University</p>
+            <p>© CollegeStuff 2017 - Web Designed & Developed By ITS 492 Students - Gallaudet University</p>
             <br>
         </div>
         <div class="col-md-4">

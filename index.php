@@ -102,7 +102,7 @@ if(isset($_POST['search'])){
 
     <div class="col-md-2">
         <div class="panel panel-default">
-            <a class="btn btn-warning btn-block" href="add_classified.php" role="button"><i class="glyphicon glyphicon-usd"></i>SELL</a>
+            <a class="btn btn-success btn-block" href="add_classified.php" role="button"><i class="glyphicon glyphicon-usd"></i>SELL</a>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -136,7 +136,7 @@ if(isset($_POST['search'])){
 
                     <div class="form-group ">
                         <span class="input-group-btn">
-                            <input type="submit" class="btn btn-success btn-block" name="search" value="Search!"style="border-radius: 5px;"/>
+                            <input type="submit" class="btn btn-info btn-block" name="search" value="Search!"style="border-radius: 5px;"/>
                         </span>
                     </div>
                 </form>
